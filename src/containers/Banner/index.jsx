@@ -3,10 +3,10 @@ import React from 'react'
 export default function Banner() {
   return (
     <div>
-       <div className="bg-img md:h-[300px] lg:h-auto lg:py-[180px]">
+       <div className="bg-img  lg:py-[180px]">
           {/* <div className="absolute inset-0 bg-black opacity-50"></div> */}
           {/* <div className="relative top-2/4 left-1/3 transform -translate-x-1/2 -translate-y-1/2 text-white"> */}
-          <div className="lg:relative text-white lg:left-[250px] p-4 w-max">
+          <div className="lg:relative text-white lg:left-[250px] p-4 sm:w-max">
             <div className=''>
               <h2 className="lg:text-[60px] lg:leading-tight font-bold lg:mb-8">
                 Each program is a <br /> masterclass created by <br /> experts to elevate your <br /> emotional well-being
