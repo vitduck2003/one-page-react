@@ -65,7 +65,7 @@ export default function Form() {
                     <input className="h-[35px] w-full p-3 sm:mb-3" type="text" id="email" name="email" placeholder="Enter your email" />
                   </div>
                 </div>
-                <button type="submit" className="w-full text-white bg-[#F1900E] p-3 rounded-[50px] uppercase">
+                <button type="submit" className="w-full text-white bg-[#F1900E] hover:bg-[#ce964c] p-3 rounded-[50px] uppercase">
                   Contact Us
                 </button>
               </form>

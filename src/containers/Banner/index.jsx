@@ -18,7 +18,7 @@ export default function Banner() {
               </p>
             </div>
             <div className="sm:mx-auto">
-              <button className="sm:text-center text-white bg-[#F1900E] lg:w-[230px] sm:mb-4 p-3 rounded-[50px]">Discover Locations</button>
+              <button className="sm:text-center text-white bg-[#F1900E] hover:bg-[#ce964c] lg:w-[230px] sm:mb-4 p-3 rounded-[50px]">Discover Locations</button>
             </div>
           </div>
         </div>
