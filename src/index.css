@@ -6,6 +6,7 @@
 
 .bg-img{
     background-image: url('https://assets.nicepagecdn.com/d2cc3eaa/2602318/images/young-woman-boxer-training-gym-min.jpg');
+    object-fit: cover;
 }
 .max-w-c{
     width: max-content;
