@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Form() {
   useEffect(() => {
     AOS.init();
   }, []);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -22,15 +25,16 @@ export default function Form() {
     })
       .then((response) => {
         if (response.ok) {
-          alert('Gửi thành công');
+          toast.success('Gửi thành công!');
         } else {
           throw new Error('Lỗi rồi: ' + response.status);
         }
       })
       .catch((error) => {
-        console.log('Lỗi r mày:', error);
+        toast.error('Lỗi: ' + error.message);
       });
   };
+
   return (
     <div className='mx-auto'>
       <section className="lg:px-[32px] lg:pt-[64px] mx-auto" style={{ fontFamily: 'Montserrat' }}>
@@ -42,10 +46,7 @@ export default function Form() {
         </h2>
         <div className="mx-auto md:mx-6">
           <div className="grid sm:grid-cols-1 lg:grid-cols-2 bg-gray-300 mx-6 lg:mx-[180px] items-center py-5">
-            <div className="mx-auto sm:m-7 "
-              data-aos="fade-right"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine">
+            <div className="mx-auto sm:m-7 " data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" >
               <div className="lg:py-5 ">
                 <p className="text-center lg:text-start text-[18px] leading-[36px] text-[#808080] mb-[32px]">
                   Let us know questions, suggestions, and by filling out the contact form below.
@@ -58,10 +59,7 @@ export default function Form() {
                 </div>
               </div>
             </div>
-            <div className="mx-auto w-full px-[64px] lg:px-0"
-              data-aos="fade-left"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine">
+            <div className="mx-auto w-full px-[64px] lg:px-0" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" >
               <div className="sm:justify-center sm:p-4">
                 <form className="mx-auto" onSubmit={handleSubmit}>
                   <label htmlFor="name">Name</label> <br />
@@ -85,6 +83,7 @@ export default function Form() {
           </div>
         </div>
       </section>
+      <ToastContainer />
     </div>
   );
 }
