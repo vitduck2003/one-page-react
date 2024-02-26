@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Card from './card';
-
 export default function Membership() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div>
-      <section style={{ fontFamily: 'Montserrat' }} className="bg-gray-300 lg:py-[64px] mx-auto sm:pb-6">
+      <section style={{ fontFamily: 'Montserrat' }} className="bg-gray-300 lg:py-[64px] mx-auto sm:pb-6 "   
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="6000">
         <h2 style={{ fontFamily: 'Oswald' }} className="text-black text-center text-[60px] font-bold">Membership Options</h2>
         <p className="text-center sm:text-[20px] leading-[39px] mb-8">All Memberships include full access to our amenities, pools, fitness classes & much more id est laborum.</p>
         <div className="mx-auto pb-2">
